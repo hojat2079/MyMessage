@@ -20,7 +20,7 @@ class MessageRepositoryImpl(
 
     override fun getInformationData(): Flow<Resource<List<Message>>> = flow {
         Timber.e("Loading infos")
-//        emit(Resource.Loading())
+        emit(Resource.Loading())
         try {
             val infos = api.getInformationData()
             Timber.e("infos : ${infos[0]}")

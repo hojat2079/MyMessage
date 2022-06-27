@@ -25,9 +25,7 @@ class MessageAdapter(
             bind.descTv.text = messageItem.description
             bind.dateTv.text = CONST_DATE.toFaNumber()
             bind.expireDateTv.text = CONST_DATE.toFaNumber()
-            messageItem.image.let {
-                if (it.isNotEmpty()) loadImage(it)
-            }
+                if (messageItem.image?.isNotEmpty() == true) loadImage(messageItem.image)
             if (messageItem.unread) unreadSetting()
             else readSetting()
         }
