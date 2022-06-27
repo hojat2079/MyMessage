@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/drawable/bg_arrow.xml" value="0.1" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/drawable/bg_radious.xml" value="0.4" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/drawable/ic_back.xml" value="0.1" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/drawable/ic_share.xml" value="0.134" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/layout/fragment_public.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/layout/fragment_saved.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/layout/image_icon.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/layout/item_message.xml" value="0.2" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/layout/item_message_expand.xml" value="0.21770833333333334" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/layout/item_message_simple.xml" value="0.264" />
+        <entry key="..\:/Users/Azarakhsh/AndroidStudioProjects/ebcom/app/src/main/res/layout/view_appbar.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

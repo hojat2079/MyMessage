@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardViewLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundWhite"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl"
+    app:cardCornerRadius="@dimen/default_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    app:strokeColor="@color/backgroundWhite">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/large_padding">
+
+        <!-- saveIcon-->
+        <ImageView
+            android:id="@+id/saveMessageIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/save_icon"
+            app:layout_constraintBottom_toBottomOf="@id/dateTv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/dateTv"
+            app:srcCompat="@drawable/ic_save" />
+
+        <!--shareIcon-->
+        <ImageView
+            android:id="@+id/shareMessageIcon"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_margin="@dimen/icon_margin"
+            android:contentDescription="@string/share_icon"
+            app:layout_constraintBottom_toBottomOf="@id/saveMessageIcon"
+            app:layout_constraintEnd_toStartOf="@id/saveMessageIcon"
+            app:layout_constraintTop_toTopOf="@id/saveMessageIcon"
+            app:srcCompat="@drawable/ic_share" />
+
+        <!--dateTextView-->
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintBottom_toBottomOf="@+id/shareMessageIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/shareMessageIcon"
+            tools:text="1400/10/24 - 10:50" />
+
+        <!--titleTextView-->
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:textAppearance="?textAppearanceHeadline5"
+            app:layout_constraintStart_toStartOf="@id/dateTv"
+            app:layout_constraintTop_toBottomOf="@id/dateTv"
+            tools:text="تیتر پیام" />
+
+        <!--LargeBannerImageView-->
+        <FrameLayout
+            android:id="@+id/LargeBannerItemLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTv">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/LargeBannerItemIv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large_image_banner_height"
+                android:contentDescription="@string/large_image_icon"
+                android:scaleType="fitXY"
+                app:shapeAppearance="@style/largeRoundedImageView"
+                tools:srcCompat="@drawable/ic_launcher_background" />
+        </FrameLayout>
+        <!--SmallBannerImageView-->
+        <LinearLayout
+            android:id="@+id/bodyLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/very_small_margin"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/titleTv"
+            app:layout_constraintTop_toBottomOf="@id/LargeBannerItemLayout">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/smallBannerItemIv"
+                android:layout_width="@dimen/imageBannerSize"
+                android:layout_height="@dimen/imageBannerSize"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:contentDescription="@string/label_image"
+                app:shapeAppearance="@style/smallRoundedImageView"
+                tools:src="@drawable/ic_launcher_background" />
+            <!--bodyTextView-->
+            <TextView
+                android:id="@+id/descTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_margin"
+                android:maxLines="1"
+                android:textAppearance="?textAppearanceBody1"
+                app:layout_constraintStart_toEndOf="@+id/smallBannerItemLayout"
+                app:layout_constraintTop_toBottomOf="@+id/titleTv"
+                tools:text="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم ..." />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lineV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/viewHeight"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginEnd="@dimen/view_margin"
+            android:background="@color/dividerColor"
+            app:layout_constraintStart_toStartOf="@id/titleTv"
+            app:layout_constraintTop_toBottomOf="@id/bodyLayout" />
+
+        <TextView
+            android:id="@+id/moneyLabelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:text="@string/valid_message"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintStart_toStartOf="@id/lineV"
+            app:layout_constraintTop_toBottomOf="@id/lineV"
+            tools:text="@string/valid_message" />
+
+        <FrameLayout
+            android:id="@+id/expandLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/large_padding"
+            android:paddingEnd="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/moneyLabelTv"
+            app:layout_constraintEnd_toEndOf="@+id/saveMessageIcon"
+            app:layout_constraintTop_toTopOf="@id/moneyLabelTv"
+
+            >
+
+            <ImageView
+                android:id="@+id/expandIv"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/bg_arrow"
+                android:contentDescription="@string/arrow_icon"
+                app:srcCompat="@drawable/ic_arrow"
+                app:tint="@color/blueIcon" />
+        </FrameLayout>
+
+
+        <!--expireDateTextView-->
+        <TextView
+            android:id="@+id/expireDateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceSubtitle1"
+            app:layout_constraintBottom_toBottomOf="@id/moneyLabelTv"
+            app:layout_constraintEnd_toStartOf="@id/expandLayout"
+            app:layout_constraintTop_toTopOf="@id/moneyLabelTv"
+            tools:text="1400/10/24 - 10:50" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

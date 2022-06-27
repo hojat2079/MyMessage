@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ebcom</string>
+    <string name="default_icon_desc">defaultIconDesc</string>
+    <string name="share_icon">shareIcon</string>
+    <string name="save_icon">saveIcon</string>
+    <string name="arrow_icon">arrowIcon</string>
+    <string name="label_image">labelImage</string>
+    <string name="large_image_icon">largeImageIcon</string>
+    <string name="back_btn">backBtn</string>
+    <string name="myMessage">پیام های من</string>
+    <string name="valid_message">اعتبار پیام</string>
+</resources>

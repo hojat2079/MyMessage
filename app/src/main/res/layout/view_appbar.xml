@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    tools:viewBindingIgnore="false"
+    android:layout_height="?actionBarSize"
+    android:background="?colorPrimary"
+    android:layoutDirection="rtl">
+    <!---->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="@dimen/backIconSize"
+        android:layout_height="@dimen/backIconSize"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="@dimen/large_margin"
+        android:background="?selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back_btn"
+        android:scaleType="centerInside"
+        android:visibility="visible"
+        app:srcCompat="@drawable/ic_back"
+        app:tint="?colorOnSurface"
+        tools:viewBindingType="android.widget.ImageView" />
+
+    <TextView
+        android:id="@+id/titleToolbarTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|start"
+        android:layout_marginStart="56dp"
+        android:textAppearance="?textAppearanceHeadline4"
+        tools:text="نام عنوان" />
+
+</FrameLayout>

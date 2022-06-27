@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backgroundWhite">#F5F5F5</color>
+    <color name="backgroundDisable">#F0F3F6</color>
+    <color name="grey">#80838B</color>
+    <color name="lightGrey">#CFCFCF</color>
+    <color name="blueWhite">#CFF5FF</color>
+    <color name="blue">#1FBEDC</color>
+    <color name="blueIcon">#3EC6E0</color>
+    <color name="blueIcon40op">#663EC6E0</color>
+    <color name="orange">#FF8800</color>
+    <color name="red">#EE6A6A</color>
+
+</resources>
