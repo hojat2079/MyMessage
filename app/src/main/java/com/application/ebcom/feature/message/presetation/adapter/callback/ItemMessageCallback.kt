@@ -5,6 +5,5 @@ interface ItemMessageCallback {
     fun onSaveClicked(index:Int,id:Int)
     fun onReadClicked(index:Int,id:Int)
     fun onUnSaveClicked(index:Int,id:Int)
-    fun onClicked()
     fun onLongClicked(isSelected:Boolean)
 }

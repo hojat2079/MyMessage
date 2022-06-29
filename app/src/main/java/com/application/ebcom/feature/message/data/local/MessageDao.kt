@@ -24,7 +24,7 @@ interface MessageDao {
     @Query("UPDATE MESSAGES SET saved = 0 WHERE ID = :id ")
     suspend fun unSaveMessage(id: Int)
 
-    @Query("UPDATE MESSAGES SET saved = 1 WHERE ID = :id ")
+    @Query("UPDATE MESSAGES SET unread = 0 WHERE ID = :id ")
     suspend fun readMessage(id: Int)
 
     @Query("SELECT * FROM MESSAGES")

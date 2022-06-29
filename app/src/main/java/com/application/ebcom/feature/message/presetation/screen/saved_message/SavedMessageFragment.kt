@@ -84,7 +84,7 @@ class SavedMessageFragment : Fragment(), ItemMessageCallback {
         adapter.notifyDataSetChanged()
 
         //diffUtil
-        adapter.setNewData(data)
+//        adapter.setNewData(data)
     }
 
     private fun emptyState() {
@@ -115,10 +115,6 @@ class SavedMessageFragment : Fragment(), ItemMessageCallback {
 
     override fun onUnSaveClicked(index: Int, id: Int) {
         messageViewModel.unSaveMessage(index, id)
-    }
-
-    override fun onClicked() {
-        //todo
     }
 
     override fun onLongClicked(isSelected: Boolean) {

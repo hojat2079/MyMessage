@@ -32,13 +32,12 @@ class MessageAdapter(
             bind.descTv.text = messageItem.description
             bind.dateTv.text = CONST_DATE.toFaNumber()
             bind.expireDateTv.text = CONST_DATE.toFaNumber()
-            if (messageItem.image?.isNotEmpty() == true) loadImage(messageItem.image)
+            if (!messageItem.image.isNullOrEmpty()) loadImage(messageItem.image)
             if (messageItem.unread) unreadSetting() else readSetting()
             if (messageItem.saved) coloredSavedIcon() else notColoredSavedIcon()
-            if (messageItem.expand == ExpandItemState.EXPANDED) expandItem(messageItem.image?.isNotEmpty() == true)
-            else if (messageItem.expand == ExpandItemState.UNEXPANDED) notExpandItem(
-                messageItem.image?.isNotEmpty() == true
-            )else bind.expandIv.visibility=View.GONE
+            if (messageItem.expand == ExpandItemState.EXPANDED) expandItem(!messageItem.image.isNullOrEmpty())
+            else if (messageItem.expand == ExpandItemState.UNEXPANDED) notExpandItem(!messageItem.image.isNullOrEmpty())
+            else bind.expandIv.visibility=View.GONE
             //click listener
             bind.expandIv.setOnClickListener { arrowIconClicked(messageItem) }
             bind.saveMessageIcon.setOnClickListener { saveIconClicked(messageItem) }
@@ -68,7 +67,7 @@ class MessageAdapter(
 
         private fun click(messageItem: Message) {
             if (getSelectedNote().isEmpty()) {
-                callback.onClicked()
+                callback.onReadClicked(messageList.indexOf(messageItem), messageItem.id!!)
 
             } else {
                 if (messageItem.selected == SelectItemState.SELECTED) {
@@ -136,6 +135,9 @@ class MessageAdapter(
             if (showImage) {
                 bind.LargeBannerItemIv.visibility = View.GONE
                 bind.smallBannerItemIv.visibility = View.VISIBLE
+            }else{
+                bind.LargeBannerItemIv.visibility = View.GONE
+                bind.smallBannerItemIv.visibility = View.GONE
             }
             bind.expandIv.setImageResource(R.drawable.ic_arrow_down)
         }
@@ -146,6 +148,9 @@ class MessageAdapter(
             if (showImage) {
                 bind.LargeBannerItemIv.visibility = View.VISIBLE
                 bind.smallBannerItemIv.visibility = View.GONE
+            }else{
+                bind.LargeBannerItemIv.visibility = View.GONE
+                bind.smallBannerItemIv.visibility = View.GONE
             }
             bind.expandIv.setImageResource(R.drawable.ic_arrow_up)
         }
@@ -153,8 +158,7 @@ class MessageAdapter(
         private fun arrowIconClicked(messageItem: Message) {
             if (messageItem.expand == ExpandItemState.UNEXPANDED) {
                 messageItem.expand = ExpandItemState.EXPANDED
-                callback.onReadClicked(messageList.indexOf(messageItem), messageItem.id!!)
-            } else messageItem.expand = ExpandItemState.EXPANDED
+            } else messageItem.expand = ExpandItemState.UNEXPANDED
             notifyItemChanged(messageList.indexOf(messageItem))
         }
 
@@ -213,7 +217,7 @@ class MessageAdapter(
         }
         notifyDataSetChanged()
         //diffUtil
-        setNewData(messageList)
+//        setNewData(messageList)
     }
 
      fun unSelectItemPosition() {

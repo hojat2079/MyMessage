@@ -96,7 +96,7 @@ class PublicMessageFragment : Fragment(), ItemMessageCallback {
         adapter.notifyDataSetChanged()
 
         //diffUtil
-        adapter.setNewData(data)
+//        adapter.setNewData(data)
     }
 
 
@@ -130,10 +130,6 @@ class PublicMessageFragment : Fragment(), ItemMessageCallback {
         binding.buttonsLayout.visibility = View.GONE
     }
 
-
-    override fun onClicked() {
-        //todo
-    }
 
     override fun onLongClicked(isSelected: Boolean) {
         if (!isSelected) {
