@@ -9,8 +9,10 @@ data class Message(
     var id: Int? = null,
     val image: String?,
     val title: String,
-    val unread: Boolean,
-    val expand: Boolean,
+    var unread: Boolean,
+    var expand: ExpandItemState,
+    var saved:Boolean,
+    var selected:SelectItemState
 ){
     fun toMessageEntity():MessageEntity{
         return MessageEntity(
@@ -18,7 +20,8 @@ data class Message(
             title = title,
             unread = unread,
             id = id,
-            image = image ?: ""
+            image = image ?: "",
+            saved = saved
         )
     }
 }

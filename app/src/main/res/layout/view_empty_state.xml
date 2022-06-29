@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/EmptyState"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:translationZ="10dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/very_large_margin"
+        android:layout_marginEnd="@dimen/very_large_margin"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/very_large_margin"
+        android:contentDescription="@string/empty_state"
+        app:srcCompat="@drawable/ic_empty_state" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/message_empty_state"
+        android:textAppearance="?textAppearanceBody1" />
+</LinearLayout>

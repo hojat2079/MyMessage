@@ -1,13 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="?backgroundColor"
-    android:layout_height="match_parent">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/messagePublicRv"
-        android:padding="@dimen/large_margin"
-        android:clipToPadding="false"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messagePublicRv"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonsLayout"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:clipToPadding="false"
+            android:padding="@dimen/large_margin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom"
+            android:background="?backgroundColor"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/buttonsLayout"
+            android:layout_marginBottom="@dimen/large_margin"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginTop="@dimen/margin_button_RV"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginEnd="@dimen/small_margin"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:textAppearance="?textAppearanceButton"
+                android:textColor="?colorOnSecondary"
+                android:text="@string/cancelTxt"
+                android:insetBottom="0dp"
+                app:backgroundTint="@color/orange"
+                app:cornerRadius="@dimen/button_radius" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteBtn"
+                android:textAppearance="?textAppearanceButton"
+                android:textColor="@color/orange"
+                android:text="@string/deleteTxt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="@dimen/button_radius"
+                app:strokeColor="@color/orange"
+                app:strokeWidth="1dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

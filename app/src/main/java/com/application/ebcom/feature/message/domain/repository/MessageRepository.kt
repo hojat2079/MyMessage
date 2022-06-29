@@ -11,9 +11,17 @@ interface MessageRepository {
 
     suspend fun deleteMessage(id: Int)
 
+    suspend fun deleteMessages(ids: List<Int>)
+
     suspend fun readMessage(id: Int)
 
+    suspend fun saveMessage(id: Int)
+
+    suspend fun unSaveMessage(id: Int)
+
     suspend fun insertNewMessage(messageEntity: MessageEntity)
+
+    suspend fun insertAllMessage(list: List<MessageEntity>)
 
     fun getAllSavedMessage(): Flow<List<MessageEntity>>
 

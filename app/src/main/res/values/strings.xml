@@ -9,4 +9,10 @@
     <string name="back_btn">backBtn</string>
     <string name="myMessage">پیام های من</string>
     <string name="valid_message">اعتبار پیام</string>
+    <string name="empty_state">empty_state</string>
+    <string name="message_empty_state">هیچ پیامی جهت نمایش موجود نیست</string>
+    <string name="error_message_connection">مشکلی در ارتباط به سرور بوجود آمد</string>
+    <string name="check_icon">check_icon</string>
+    <string name="deleteTxt">حذف</string>
+    <string name="cancelTxt">انصراف</string>
 </resources>

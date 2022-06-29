@@ -22,7 +22,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayoutMain"
             android:background="?colorPrimary"
-            app:tabTextAppearance="?textAppearanceSubtitle1"
+            app:tabTextAppearance="?textAppearanceHeadline6"
             app:tabSelectedTextColor="?colorOnPrimary"
             android:layoutDirection="rtl"
             app:tabIndicatorFullWidth="true"

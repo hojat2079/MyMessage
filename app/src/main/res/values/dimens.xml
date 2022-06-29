@@ -3,6 +3,7 @@
     <dimen name="item_message_height">160dp</dimen>
     <dimen name="large_padding">16dp</dimen>
     <dimen name="large_margin">16dp</dimen>
+    <dimen name="very_large_margin">32dp</dimen>
     <dimen name="default_corner_radius">12dp</dimen>
     <dimen name="icon_size">24dp</dimen>
     <dimen name="icon_margin">14dp</dimen>
@@ -10,11 +11,14 @@
     <dimen name="small_margin">8dp</dimen>
     <dimen name="very_small_margin">4dp</dimen>
     <dimen name="view_margin">40dp</dimen>
-    <dimen name="viewHeight">1dp</dimen>
+    <dimen name="viewHeight">0.5dp</dimen>
     <dimen name="card_elevation">2dp</dimen>
     <dimen name="imageBannerSize">40dp</dimen>
     <dimen name="small_corner_radius">4dp</dimen>
     <dimen name="large_image_banner_height">100dp</dimen>
     <dimen name="backIconSize">32dp</dimen>
     <dimen name="tab_size">48dp</dimen>
+    <dimen name="button_radius">8dp</dimen>
+    <dimen name="button_height">46dp</dimen>
+    <dimen name="margin_button_RV">56dp</dimen>
 </resources>

@@ -2,7 +2,9 @@ package com.application.ebcom.feature.message.data.remote.dto
 
 
 import com.application.ebcom.feature.message.data.local.entity.MessageEntity
+import com.application.ebcom.feature.message.domain.model.ExpandItemState
 import com.application.ebcom.feature.message.domain.model.Message
+import com.application.ebcom.feature.message.domain.model.SelectItemState
 import com.google.gson.annotations.SerializedName
 
 data class MessageDto(
@@ -16,20 +18,15 @@ data class MessageDto(
     val title: String,
     @SerializedName("unread")
     val unread: Boolean
-){
-    fun toMessageEntity() = MessageEntity(
-        description=description,
-        image = image ?: "",
-        title = title,
-        unread = unread,
-        id = id.toInt()
-    )
+) {
     fun toMessage() = Message(
-        description=description,
+        description = description,
         image = image,
         title = title,
         unread = unread,
         id = id.toInt(),
-        expand = false
+        expand = ExpandItemState.UNEXPANDED,
+        saved = false,
+        selected = SelectItemState.GONE
     )
 }

@@ -9,7 +9,6 @@ import com.application.ebcom.feature.message.data.remote.MessageApiService.Compa
 import com.application.ebcom.feature.message.data.repository.MessageRepositoryImpl
 import com.application.ebcom.feature.message.domain.repository.MessageRepository
 import com.application.ebcom.feature.message.domain.use_case.*
-import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,7 +32,11 @@ object AppModule {
             getAllMessageRemote = GetAllMessageRemote(repository = repository),
             addMessage = AddMessage(repository = repository),
             deleteMessage = DeleteMessage(repository = repository),
-            readMessage = ReadMessage(repository = repository)
+            saveMessage = SaveMessage(repository = repository),
+            addAllMessage = AddAllMessage(repository = repository),
+            unSaveMessage = UnSaveMessage(repository = repository),
+            readMessage = ReadMessage(repository = repository),
+            deleteMessages = DeleteMessages(repository = repository)
         )
     }
 

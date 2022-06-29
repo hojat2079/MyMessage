@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cardViewLayout"
-    android:layout_width="match_parent"
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemLayout"
     android:layout_height="wrap_content"
-    android:background="@color/backgroundWhite"
+    android:layout_width="match_parent"
     android:layoutDirection="rtl"
     android:textDirection="rtl"
-    app:cardCornerRadius="@dimen/default_corner_radius"
-    app:cardElevation="@dimen/card_elevation"
-    app:strokeColor="@color/backgroundWhite">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools">
+<ImageView
+    android:layout_width="@dimen/icon_size"
+    android:layout_height="@dimen/icon_size"
+    android:background="@drawable/bg_check"
+    android:id="@+id/doneCheckBox"
+    android:visibility="gone"
+    tools:visibility="visible"
+    android:layout_gravity="center"
+    android:layout_marginEnd="@dimen/small_margin"
+    app:tint="@color/white"
+    app:srcCompat="@drawable/ic_check"
+    android:contentDescription="@string/check_icon" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardViewLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/large_padding">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:background="@drawable/bg_item"
+        android:elevation="0dp"
+        android:layoutDirection="rtl"
+        android:padding="@dimen/large_padding"
+        android:textDirection="rtl">
 
         <!-- saveIcon-->
         <ImageView
@@ -57,6 +73,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textAppearance="?textAppearanceHeadline5"
             app:layout_constraintStart_toStartOf="@id/dateTv"
             app:layout_constraintTop_toBottomOf="@id/dateTv"
@@ -78,6 +96,7 @@
                 android:layout_height="@dimen/large_image_banner_height"
                 android:contentDescription="@string/large_image_icon"
                 android:scaleType="fitXY"
+                android:visibility="gone"
                 app:shapeAppearance="@style/largeRoundedImageView"
                 tools:srcCompat="@drawable/ic_launcher_background" />
         </FrameLayout>
@@ -97,6 +116,7 @@
                 android:layout_height="@dimen/imageBannerSize"
                 android:layout_marginEnd="@dimen/small_margin"
                 android:contentDescription="@string/label_image"
+                android:visibility="gone"
                 app:shapeAppearance="@style/smallRoundedImageView"
                 tools:src="@drawable/ic_launcher_background" />
             <!--bodyTextView-->
@@ -105,6 +125,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/small_margin"
+                android:ellipsize="end"
+                android:lineSpacingExtra="4dp"
                 android:maxLines="1"
                 android:textAppearance="?textAppearanceBody1"
                 app:layout_constraintStart_toEndOf="@+id/smallBannerItemLayout"
@@ -115,12 +137,13 @@
 
         <View
             android:id="@+id/lineV"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="@dimen/viewHeight"
             android:layout_marginTop="@dimen/medium_margin"
             android:layout_marginEnd="@dimen/view_margin"
-            android:background="@color/dividerColor"
-            app:layout_constraintStart_toStartOf="@id/titleTv"
+            android:background="@color/lightGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/bodyLayout" />
 
         <TextView
@@ -152,7 +175,7 @@
                 android:layout_height="@dimen/icon_size"
                 android:background="@drawable/bg_arrow"
                 android:contentDescription="@string/arrow_icon"
-                app:srcCompat="@drawable/ic_arrow"
+                app:srcCompat="@drawable/ic_arrow_down"
                 app:tint="@color/blueIcon" />
         </FrameLayout>
 
@@ -169,5 +192,4 @@
             tools:text="1400/10/24 - 10:50" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</com.google.android.material.card.MaterialCardView>
+</LinearLayout>
